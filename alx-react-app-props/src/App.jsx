@@ -1,3 +1,4 @@
+// src/App.jsx
 import WelcomeMessage from './components/WelcomeMessage';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -7,24 +8,25 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 import MainContent from './components/MainContent';
-import { UserContext } from './UserContext'; // ✅ Correct import
+import UserContext from './UserContext'; // default import
 
 function App() {
   const [count, setCount] = useState(0);
 
-  const user = {
-    name: "Alice",
-    age: 25,
+  const userData = {
+    name: "Jane Doe",
+    email: "jane.doe@example.com",
+    age: "25",
     bio: "Loves hiking and photography"
   };
 
   return (
-    <UserContext.Provider value={user}>
+    <UserContext.Provider value={userData}>
       <div>
         <WelcomeMessage />
         <Header />
         <MainContent />
-        <UserProfile />
+        <UserProfile /> {/* now reads from context */}
         <Footer />
       </div>
 
@@ -39,7 +41,7 @@ function App() {
 
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button onClick={() => setCount((c) => c + 1)}>
           count is {count}
         </button>
         <p>
