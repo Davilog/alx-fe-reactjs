@@ -8,7 +8,7 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 import MainContent from './components/MainContent';
-import UserContext from './UserContext'; // default import
+import { UserContext } from './UserContext';
 
 function App() {
   const [count, setCount] = useState(0);
