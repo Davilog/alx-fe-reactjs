@@ -7,6 +7,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import MainContent from './components/MainContent';
+import Counter from './components/Counter';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Header />
       <MainContent />
       <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
+      <Counter />
       <Footer />
     </div>
       <div>
