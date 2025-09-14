@@ -1,29 +1,32 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import useRecipeStore from "./components/recipeStore";
 
-function AddRecipeForm() {
-  const [title, setTitle] = useState("");
-  const [ingredients, setIngredients] = useState("");
-  const [instructions, setInstructions] = useState("");
-  const addRecipe = useRecipeStore((state) => state.addRecipe);
+function EditRecipeForm() {
+  const { id } = useParams();
+  const recipe = useRecipeStore((state) =>
+    state.recipes.find((r) => r.id === Number(id))
+  );
+  const updateRecipe = useRecipeStore((state) => state.updateRecipe);
   const navigate = useNavigate();
+
+  const [title, setTitle] = useState(recipe?.title || "");
+  const [ingredients, setIngredients] = useState(recipe?.ingredients || "");
+  const [instructions, setInstructions] = useState(recipe?.instructions || "");
+
+  if (!recipe) {
+    return <p>Recipe not found</p>;
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newRecipe = {
-      id: Date.now(),
-      title,
-      ingredients,
-      instructions,
-    };
-    addRecipe(newRecipe);
-    navigate("/");
+    updateRecipe(recipe.id, { title, ingredients, instructions });
+    navigate(`/recipe/${recipe.id}`);
   };
 
   return (
     <div style={{ padding: "1rem" }}>
-      <h2>Add Recipe</h2>
+      <h2>Edit Recipe</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label>Title: </label>
@@ -37,10 +40,10 @@ function AddRecipeForm() {
           <label>Instructions: </label>
           <textarea value={instructions} onChange={(e) => setInstructions(e.target.value)} required />
         </div>
-        <button type="submit">Add Recipe</button>
+        <button type="submit">Save Changes</button>
       </form>
     </div>
   );
 }
 
-export default AddRecipeForm;
+export default EditRecipeForm;
