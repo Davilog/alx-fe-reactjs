@@ -18,8 +18,8 @@ function EditRecipeForm() {
     return <p>Recipe not found</p>;
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
     updateRecipe(recipe.id, { title, ingredients, instructions });
     navigate(`/recipe/${recipe.id}`);
   };
@@ -30,15 +30,15 @@ function EditRecipeForm() {
       <form onSubmit={handleSubmit}>
         <div>
           <label>Title: </label>
-          <input value={title} onChange={(e) => setTitle(e.target.value)} required />
+          <input value={title} onChange={(event) => setTitle(event.target.value)} required />
         </div>
         <div>
           <label>Ingredients: </label>
-          <textarea value={ingredients} onChange={(e) => setIngredients(e.target.value)} required />
+          <textarea value={ingredients} onChange={(event) => setIngredients(event.target.value)} required />
         </div>
         <div>
           <label>Instructions: </label>
-          <textarea value={instructions} onChange={(e) => setInstructions(e.target.value)} required />
+          <textarea value={instructions} onChange={(event) => setInstructions(event.target.value)} required />
         </div>
         <button type="submit">Save Changes</button>
       </form>
