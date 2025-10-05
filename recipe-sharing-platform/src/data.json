@@ -3,24 +3,94 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "https://via.placeholder.com/150"
+    "image": "https://via.placeholder.com/300",
+    "ingredients": [
+      "400g spaghetti",
+      "200g pancetta or bacon",
+      "4 large eggs",
+      "100g Pecorino Romano cheese",
+      "Black pepper",
+      "Salt"
+    ],
+    "instructions": [
+      "Cook spaghetti in salted boiling water until al dente.",
+      "Fry pancetta until crispy.",
+      "Beat eggs with grated cheese and black pepper.",
+      "Drain pasta and mix with pancetta.",
+      "Remove from heat and quickly stir in egg mixture.",
+      "Serve immediately with extra cheese."
+    ]
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-    "image": "https://via.placeholder.com/150"
+    "image": "https://via.placeholder.com/300",
+    "ingredients": [
+      "500g chicken breast",
+      "200ml heavy cream",
+      "400g canned tomatoes",
+      "2 onions",
+      "3 cloves garlic",
+      "Garam masala",
+      "Turmeric",
+      "Cumin"
+    ],
+    "instructions": [
+      "Marinate chicken in yogurt and spices for 2 hours.",
+      "Grill chicken until cooked through.",
+      "Sauté onions and garlic until golden.",
+      "Add tomatoes and spices, simmer for 10 minutes.",
+      "Add cream and grilled chicken.",
+      "Simmer for 5 minutes and serve with rice."
+    ]
   },
   {
     "id": 3,
     "title": "Caesar Salad",
     "summary": "Fresh romaine lettuce with parmesan cheese, croutons, and Caesar dressing.",
-    "image": "https://via.placeholder.com/150"
+    "image": "https://via.placeholder.com/300",
+    "ingredients": [
+      "2 heads romaine lettuce",
+      "100g Parmesan cheese",
+      "2 cups croutons",
+      "3 anchovy fillets",
+      "2 cloves garlic",
+      "1 egg yolk",
+      "Lemon juice",
+      "Olive oil"
+    ],
+    "instructions": [
+      "Wash and chop romaine lettuce.",
+      "Make dressing with anchovies, garlic, egg yolk, and lemon.",
+      "Slowly whisk in olive oil.",
+      "Toss lettuce with dressing.",
+      "Top with Parmesan and croutons.",
+      "Serve immediately."
+    ]
   },
   {
     "id": 4,
     "title": "Beef Tacos",
     "summary": "Seasoned ground beef in soft tortillas with fresh toppings and salsa.",
-    "image": "https://via.placeholder.com/150"
+    "image": "https://via.placeholder.com/300",
+    "ingredients": [
+      "500g ground beef",
+      "8 soft tortillas",
+      "1 onion",
+      "2 tomatoes",
+      "Lettuce",
+      "Cheddar cheese",
+      "Sour cream",
+      "Taco seasoning"
+    ],
+    "instructions": [
+      "Brown ground beef in a large skillet.",
+      "Add diced onion and cook until soft.",
+      "Stir in taco seasoning and water.",
+      "Simmer for 10 minutes.",
+      "Warm tortillas in microwave.",
+      "Fill tortillas with beef and toppings."
+    ]
   }
 ]
