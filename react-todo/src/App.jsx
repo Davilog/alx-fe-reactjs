@@ -1,9 +1,9 @@
-import TodoList from './components/TodoList'
+import TodoList from './TodoList'
 import './App.css'
 
 function App() {
   return (
-    <div style={{ padding: '20px', maxWidth: '600px', margin: '0 auto' }}>
+    <div>
       <TodoList />
     </div>
   )
